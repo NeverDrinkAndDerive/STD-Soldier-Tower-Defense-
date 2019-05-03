@@ -228,7 +228,7 @@ function drawMap() {
     var startbutton = document.createElement("div");
     startbutton.setAttribute("id", "startbutton");
     startbutton.setAttribute("class", "startbutton");
-    startbutton.innerHTML = "<p> Start! </p>";
+    startbutton.innerHTML = "<p> Begin </p>";
     listenEvent(startbutton, "click", startwave);
     document.body.appendChild(startbutton);
     var resetbutton = document.createElement("div");
@@ -247,7 +247,7 @@ function startwave(evt) {
   if (isRunning) return;
   isRunning = true;
   var sb = document.getElementById("startbutton");
-  sb.innerHTML = "<p> Pause </p>";
+  sb.innerHTML = "<p> Stop </p>";
   listenEvent(sb, "click", pausewave);	
   currentWave = 0;
   currentLives = 10;
